@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PHP and Angular JS Bunk Mail Client</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/angular.min.js"></script>
+        <script src="js/script.js"></script>        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading bg-top-grey">
+                            New Bunk Email {{form.subject}}
+                        </div>
+                        <div class="panel-body p-sm">
+                        <h4 class="text-primary text-center">{{report}}</h4>
+                            <form>
+                                <div class="form-group">
+                                    <label>To : </label>
+                                    <textarea row="3" name="emails" ng-model="form.emails" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>From : </label>
+                                    <input type="text" name="email" ng-model="form.emailer" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Subject : </label>
+                                    <input type="text" name="subject" ng-model="form.subject" class="form-control" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-md btn-primary" ng-click="send(form)">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </body>
+</html>

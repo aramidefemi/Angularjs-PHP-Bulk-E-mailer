@@ -1,0 +1,12 @@
+body{
+    padding-top:100px;
+    background-color: #E1E1E1;
+}
+.bg-top-grey{
+    background-color: #707070 !important;
+    color:#fff !important;
+    font-weight: bold;
+}
+.p-sm{
+    padding-top: 15px;
+}
