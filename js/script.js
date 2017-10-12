@@ -10,7 +10,7 @@ app.controller('myCtrl', function ($scope, $http) {
         femi.report = "Sending To Emails...";
         var request = $http({
             method: "post",
-            url: "",
+            url: "back/mailer",
             data: form,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
